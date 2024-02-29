@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/azul_oscuro">
+
+    <carbon.widget.LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <carbon.widget.LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            >
+            <carbon.widget.TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                android:fontFamily="@font/ubuntu_bold"/>
+            <carbon.widget.TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Wellcome back"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:fontFamily="@font/ubuntu_regular"/>
+        </carbon.widget.LinearLayout>
+
+
+        <carbon.widget.LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_rounded_top_corners"
+            android:padding="24dp"
+            android:layout_marginTop="32dp"
+            android:orientation="vertical">
+
+
+            <carbon.widget.LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:gravity="center"
+                android:background="@drawable/bg_rounded"
+                app:carbon_cornerRadius="18dp"
+                app:carbon_elevation="12dp"
+                app:carbon_elevationShadowColor="@color/navy"
+                >
+
+                <carbon.widget.TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:text="Email"
+                    android:textColor="@color/gris_azulado"
+                    android:textSize="16sp" />
+
+                <carbon.widget.EditText
+                    android:id="@+id/ed_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_ed_rounded"
+                    android:ems="10"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:hint="Introduce tu email"
+                    android:inputType="textEmailAddress"
+                    android:padding="15dp"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/gris"
+                    android:textColorHint="@color/gris"
+                    android:textSize="16sp" />
+
+
+                <carbon.widget.TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:text="Contraseña"
+                    android:textColor="@color/gris_azulado"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/gris"
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:hintEnabled="false"
+                    app:hintTextColor="@color/gris"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/gris">
+
+                    <carbon.widget.EditText
+                        android:id="@+id/ed_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_ed_rounded"
+                        android:drawablePadding="10dp"
+                        android:ems="10"
+                        android:fontFamily="@font/ubuntu_regular"
+                        android:hint="Introduce tu contraseña"
+                        android:inputType="textPassword"
+                        android:padding="15dp"
+                        android:textColor="@color/gris"
+                        android:textColorHint="@color/gris"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <carbon.widget.LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <carbon.widget.LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <!-- SwitchCompat -->
+                        <androidx.appcompat.widget.SwitchCompat
+                            android:id="@+id/sw_remember"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:thumb="@drawable/btn_switch_off"
+                            app:track="@drawable/track_selector" />
+
+                        <carbon.widget.TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/ubuntu_regular"
+                            android:gravity="center"
+                            android:labelFor="@+id/sw_remember"
+                            android:text="Recordarme"
+                            android:textColor="@color/gris_azulado"
+                            android:textSize="14sp" />
+                    </carbon.widget.LinearLayout>
+
+                    <carbon.widget.LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <carbon.widget.TextView
+                            android:id="@+id/txt_forgot_password"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/ubuntu_regular"
+                            android:gravity="center"
+                            android:text="¿Contraseña perdida?"
+                            android:textColor="@color/gris_azulado"
+                            android:textSize="14sp" />
+                    </carbon.widget.LinearLayout>
+                </carbon.widget.LinearLayout>
+            </carbon.widget.LinearLayout>
+
+            <Button
+                android:id="@+id/bt_login"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_buttons"
+                android:fontFamily="@font/ubuntu_regular"
+                android:text="Iniciar Sesion"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                app:backgroundTint="@null" />
+
+        </carbon.widget.LinearLayout>
+
+    </carbon.widget.LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
